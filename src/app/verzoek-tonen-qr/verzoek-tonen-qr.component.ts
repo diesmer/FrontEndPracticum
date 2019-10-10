@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class VerzoekTonenQrComponent implements OnInit {
 
   status: boolean = true;
-  user: string = "Süleyman"
+  user: string = "Süleyman";
 
   constructor() { }
 

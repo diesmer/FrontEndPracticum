@@ -1,0 +1,29 @@
+<div class="content">
+        <div class="aanvraag">
+            <h2>Aanvraag</h2>
+            <div class="list">
+                <table>
+                    <tr>
+                        <th>Email</th>
+                        <th>Datum</th>
+                        <th>Tijd</th>
+                        <th>Goedkeuren</th>
+                        <th>Afkeuren</th>
+                    </tr>
+                    <tr *ngFor="let student of students">
+                        <td>{{student.email}}</td>
+                        <td>{{student.datum}}</td>
+                        <td>{{student.tijd}}</td>
+                        <td><input *ngIf = student.status class='myclass' type='button' value='Goedkeuren' (click) = buttonclick(student)/></td>
+                        <td><input *ngIf = student.status class='myclass' type='button' value='Afkeuren'(click) = afkeuren(student)/></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="qr-class">
+                <h3 *ngIf = status>Qr-test</h3>
+            </div>
+        </div>
+        <div class="welkomLabel">
+            <span>Welkom {{user}}</span>
+        </div>
+    </div>
