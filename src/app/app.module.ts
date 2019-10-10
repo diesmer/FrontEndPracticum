@@ -13,6 +13,7 @@ import { VerzoekIndienenComponent } from './verzoekIndienen/verzoekIndienen.comp
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { VerzoekTonenQrComponent } from './verzoek-tonen-qr/verzoek-tonen-qr.component';
 import { AanvraagTonenComponent } from './aanvraag-tonen/aanvraag-tonen.component';
+import { AanvraagKeurenComponent } from './aanvraag-keuren/aanvraag-keuren.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AanvraagTonenComponent } from './aanvraag-tonen/aanvraag-tonen.componen
     RegistreerPaginaComponent,
     VerzoekTonenQrComponent,
     AanvraagTonenComponent,
+    AanvraagKeurenComponent,
   ],
   imports: [
     BrowserModule,
