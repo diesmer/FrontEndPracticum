@@ -3,11 +3,12 @@
 }
 
 .sidenav {
+  /*background: #466aec; */
   width: 200px;
 }
 
 .sidenav .mat-toolbar {
-  background: inherit;
+  background: white;
 }
 
 .mat-toolbar.mat-primary {

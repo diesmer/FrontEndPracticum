@@ -7,13 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Login/login.component';
+import { RegistreerPaginaComponent } from './registreerPagina/registreer.component';
+import { VerzoekIndienenComponent } from './verzoekIndienen/verzoekIndienen.component';
+
 import { MainNavComponent } from './main-nav/main-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MainNavComponent
+    MainNavComponent,
+    VerzoekIndienenComponent,
+    RegistreerPaginaComponent
   ],
   imports: [
     BrowserModule,
