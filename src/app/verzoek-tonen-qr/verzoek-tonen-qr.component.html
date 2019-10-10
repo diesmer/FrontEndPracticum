@@ -1,1 +1,25 @@
-<p>verzoek-tonen-qr works!</p>
+<div class="content">
+    <div class="verzoek">
+        <h2>Verzoek</h2>
+        <div class="list">
+            <table>
+                <tr>
+                    <th>Datum</th>
+                    <th>Tijd</th>
+                    <th>Status:</th>
+                </tr>
+                <tr>
+                    <td>11-11-2019</td>
+                    <td>14:30</td>
+                    <td>goed gekeurd</td>
+                </tr>
+            </table>
+        </div>
+        <div class="qr-class">
+            <h3 *ngIf = status>Qr-test</h3>
+        </div>
+    </div>
+    <div class="welkomLabel">
+        <span>Welkom {{user}}</span>
+    </div>
+</div>
