@@ -10,7 +10,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'registreer', component: RegistreerPaginaComponent},
     { path: 'verzoekIndienen', component: VerzoekIndienenComponent},
-    { path: 'TonenQr', component: VerzoekTonenQrComponent}
+    { path: 'tonenQr', component: VerzoekTonenQrComponent}
     // otherwise redirect to home
 ];
 
