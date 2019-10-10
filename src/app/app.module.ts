@@ -11,6 +11,7 @@ import { RegistreerPaginaComponent } from './registreerPagina/registreer.compone
 import { VerzoekIndienenComponent } from './verzoekIndienen/verzoekIndienen.component';
 
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { VerzoekTonenQrComponent } from './verzoek-tonen-qr/verzoek-tonen-qr.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MainNavComponent } from './main-nav/main-nav.component';
     LoginComponent,
     MainNavComponent,
     VerzoekIndienenComponent,
-    RegistreerPaginaComponent
+    RegistreerPaginaComponent,
+    VerzoekTonenQrComponent,
   ],
   imports: [
     BrowserModule,

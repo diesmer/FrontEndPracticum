@@ -3,9 +3,9 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="login">Login</a>
-      <a mat-list-item href="registreer">Registreer Account</a>
-      <a mat-list-item href="verzoekIndienen">Verzoek Indienen</a>
+      <a mat-list-item routerLink="login">Login</a>
+      <a mat-list-item routerLink="registreer">Registreer Account</a>
+      <a mat-list-item routerLink="TonenQr">QR-Code</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
