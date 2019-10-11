@@ -28,7 +28,6 @@ import { TekeurenaanvragenComponent } from './components/tekeurenaanvragen/tekeu
 import { ToevoegenaanvraagComponent } from './components/toevoegenaanvraag/toevoegenaanvraag.component';
 
 import { AanvraagqrComponent } from './components/aanvraagqr/aanvraagqr.component';
-import { FormsModule } from '@angular/forms';
 
 import { QRCodeModule } from 'angular2-qrcode';
 
@@ -59,7 +58,8 @@ import { QRCodeModule } from 'angular2-qrcode';
     MatListModule,
     AngularFireModule.initializeApp(environment.firebase, 'aanvraag-list-app'),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
-    QRCodeModule
+    QRCodeModule,
+    FormsModule
   ],
   providers: [AanvraagService, PersoonService],
   bootstrap: [AppComponent]

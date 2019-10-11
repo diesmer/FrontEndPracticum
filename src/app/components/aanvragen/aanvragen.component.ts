@@ -14,6 +14,9 @@ export class AanvragenComponent implements OnInit {
 
   aanvragen: Aanvraag[];
 
+  //Ingelogde user
+  user=sessionStorage.getItem('email');
+
   //Voorhet vaststellen van de state, nodig voor updaten
   editState: boolean = true;
   aanvraagToEdit: Aanvraag;
