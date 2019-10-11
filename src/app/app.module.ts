@@ -26,7 +26,8 @@ import { PersoonService } from './services/persoon.service';
 import { TekeurenaanvragenComponent } from './components/tekeurenaanvragen/tekeurenaanvragen.component';
 import { ToevoegenaanvraagComponent } from './components/toevoegenaanvraag/toevoegenaanvraag.component';
 
-import { AanvraagqrComponent } from './components/aanvraagqr/aanvraagqr.component'
+import { AanvraagqrComponent } from './components/aanvraagqr/aanvraagqr.component';
+import { FormsModule } from '@angular/forms';
 
 import { QRCodeModule } from 'angular2-qrcode';
 
