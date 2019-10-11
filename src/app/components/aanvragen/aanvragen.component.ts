@@ -24,6 +24,7 @@ export class AanvragenComponent implements OnInit {
     //Aanvragen ophalen
     this.aanvraagService.getAanvragen().subscribe(aanvragen => {
       this.aanvragen = aanvragen;
+      console.log(this.aanvragen);
     });
 
   }
