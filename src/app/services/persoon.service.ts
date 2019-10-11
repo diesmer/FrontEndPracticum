@@ -11,8 +11,8 @@ import { Observable } from 'rxjs';
 })
 export class PersoonService {
 
+  //Ophalen van de collectie
   personen: Observable<Persoon[]>;
-
   personenCollection: AngularFirestoreCollection<Persoon>;
 
   constructor(public afs: AngularFirestore) { 
@@ -20,6 +20,7 @@ export class PersoonService {
     this.personenCollection = this.afs.collection<Persoon>('personen');
   }
 
+  //Getter van de collectie personen
   getPersonen() {
     return this.personen;
   }

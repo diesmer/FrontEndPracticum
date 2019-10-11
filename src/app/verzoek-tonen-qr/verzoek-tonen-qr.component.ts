@@ -7,9 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerzoekTonenQrComponent implements OnInit {
 
-  status: boolean = true;
-  user: string = "Süleyman";
-
   constructor() { }
 
   ngOnInit() {
