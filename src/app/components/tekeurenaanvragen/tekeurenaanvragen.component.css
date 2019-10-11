@@ -1,20 +1,8 @@
-.aanvraag{
-    width: 50%;
-    border: 3px solid black;
-    border-radius: 25px;
-}
-.aanvraag h2{
-    padding-left: 10px;
-}
-
 .welkomLabel{
     padding: 100px 0;
-    border: 3px solid black;
-    border-radius: 25px;
     text-align: center;
     width: 40%;
 }
-
 
 .content{
     display: flex;
@@ -23,37 +11,23 @@
     padding-top: 50px;
 }
 
-.list{
-    display: flex;
-    justify-content: space-around;
-}
-
 .qr-class{
     padding: 15px;
     text-align: center;
 }
 
-.list th{
-    padding: 5px;
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
 }
 
-table, td, th{
-    border: 1px solid black;
-    background-color: aliceblue;
+h2, table {
+    margin-left: 8%;
 }
 
-table{
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th{
-    text-align: center;
-    height: 50px;
-}
-
-td{
-    padding-left: 10px;
+h2 {
+    margin-top: 30px;
 }
 
 .myclass{
