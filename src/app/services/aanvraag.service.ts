@@ -46,12 +46,11 @@ export class AanvraagService {
 
 
   updateAanvraag(aanvraagid) {
-    // this.aanvraagDoc = this.afs.doc('aanvragen/$(aanvraag.status)');
-    // this.aanvraagDoc.update(aanvraag);
-
-    console.log(aanvraagid);
     return this.afs.collection('aanvragen').doc(aanvraagid).set({ status:'Goedgekeurd'}, { merge: true });
+  }
 
+  updateAanvraagAfkeuren(aanvraagid) {
+    return this.afs.collection('aanvragen').doc(aanvraagid).set({ status:'Afgekeurd'}, { merge: true });
   }
 
 }

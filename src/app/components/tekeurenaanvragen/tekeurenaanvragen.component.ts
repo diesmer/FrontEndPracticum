@@ -30,8 +30,11 @@ export class TekeurenaanvragenComponent implements OnInit {
   // }
 
   updateAanvraag(aanvraagid) {
-    console.log(aanvraagid);
     this.aanvraagService.updateAanvraag(aanvraagid);
+  }
+
+  updateAanvraagAfkeuren(aanvraagid) {
+    this.aanvraagService.updateAanvraagAfkeuren(aanvraagid);
   }
 
 }

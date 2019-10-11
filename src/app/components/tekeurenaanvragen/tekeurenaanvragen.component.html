@@ -14,18 +14,12 @@
                     <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.email}}</td>
                     <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.datum}}</td>
                     <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.tijd}}</td>
-                    <td *ngIf="aanvraag.status==='behandeling';">
-                        <!-- <div *ngIf="editState && aanvraagToEdit.datum == aanvraag.datum"> -->
-                        <div>    
-                            <!-- <form (ngSubmit)="updateAanvraag(aanvraag, aanvraagid)">
-                                <input type="text" name="status" value="goedgekeurd">
-                                <input type="text" name="aanvraagid" value="{{aanvraag.id}}">
-                                <input type="submit" value="Goedkeuren">
-                            </form> -->
-                            <!--<input type="button" value="Goedkeuren" (click)="updateAanvraag({{aanvraag.id}})">-->
-                        </div>
+                    <td *ngIf="aanvraag.status==='behandeling';">   
+                        <input type="button" value="Goedkeuren" (click)="updateAanvraag(aanvraag.id)">
                     </td>
-                    <td *ngIf="aanvraag.status==='behandeling';"><button>Afkeuren</button></td>
+                    <td *ngIf="aanvraag.status==='behandeling';">
+                        <input type="button" value="Afkeuren" (click)="updateAanvraagAfkeuren(aanvraag.id)">
+                    </td>
                 </tr>
             </table>
         </div>
