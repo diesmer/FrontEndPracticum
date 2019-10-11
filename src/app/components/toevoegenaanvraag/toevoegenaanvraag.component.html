@@ -1,0 +1,74 @@
+<div>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <h5>Toevoegen aanvraag</h5>
+                </div>
+                <div>
+                    <form (ngSubmit)="onSubmit()">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label>Datum</label>
+                                    <input type="date" [(ngModel)]="aanvraag.datum" name="datum">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Tijd</label>
+                                    <input type="time" [(ngModel)]="aanvraag.tijd" name="tijd">
+                                </td>
+                            </tr>
+                        </table>
+                        <div>
+                            <div>
+                                <input type="submit" value="Toevoegen aanvraag">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <div class="content">
+    <div class="aanvraag">
+        <h2>Aanvraag</h2>
+        <div class="list">
+            <table>
+                <tr>
+                    <th>Email</th>
+                    <th>Datum</th>
+                    <th>Tijd</th>
+                    <th>Goedkeuren</th>
+                    <th>Afkeuren</th>
+                </tr>
+                <tr *ngFor="let aanvraag of aanvragen">
+                    <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.email}}</td>
+                    <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.datum}}</td>
+                    <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.tijd}}</td>
+                    <td *ngIf="aanvraag.status==='behandeling';">
+                         <div>
+                            <form (ngSubmit)="updateAanvraag(aanvraag)">
+                                <input type="text" [(ngModel)]="aanvraag.status" name="status" value="goedgekeurd"> 
+                                <button (click)="goedkeurenAanvraag($event, aanvraag)">Goedkeuren</button>
+                             </form>
+                        </div> 
+                    </td>
+                    <td *ngIf="aanvraag.status==='behandeling';"><button>Afkeuren</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="qr-class">
+            <h3 *ngIf = status>Qr-test</h3>
+        </div>
+    </div>
+    <div class="welkomLabel">
+        <span>Welkom {{user}}</span>
+    </div>
+</div> -->

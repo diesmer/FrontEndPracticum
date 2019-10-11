@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AanvraagService } from '../../services/aanvraag.service';
 
 import { Aanvraag } from '../../models/aanvraag';
+import { AbstractEmitterVisitor } from '@angular/compiler/src/output/abstract_emitter';
 
 @Component({
   selector: 'app-aanvragen',
@@ -13,6 +14,9 @@ export class AanvragenComponent implements OnInit {
 
   aanvragen: Aanvraag[];
 
+  editState: boolean = true;
+  aanvraagToEdit: Aanvraag;
+
   constructor(public aanvraagService: AanvraagService) { }
 
   ngOnInit() {
@@ -22,5 +26,11 @@ export class AanvragenComponent implements OnInit {
     });
 
   }
+
+
+  // editAanvraag(event, aanvraag: Aanvraag) {
+  //   this.editState = true;
+  //   this.aanvraagToEdit = aanvraag;
+  // }
 
 }

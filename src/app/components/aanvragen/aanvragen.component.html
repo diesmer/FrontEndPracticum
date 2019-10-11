@@ -17,8 +17,27 @@
                     </tr>
                 </table>
             </div>
+
+    <div class="verzoek">
+        <h2>Aanvraag</h2>
+        <div class="list">
+            <table>
+                <tr>
+                    <th>Email</th>
+                    <th>Datum</th>
+                    <th>Tijd</th>
+                    <th>Status</th>
+                </tr>
+                <tr *ngFor="let aanvraag of aanvragen">
+                    <td *ngIf="aanvraag.status!=='behandeling';">{{aanvraag.email}}</td>
+                    <td *ngIf="aanvraag.status!=='behandeling';">{{aanvraag.datum}}</td>
+                    <td *ngIf="aanvraag.status!=='behandeling';">{{aanvraag.tijd}}</td>
+                    <td *ngIf="aanvraag.status!=='behandeling';">{{aanvraag.status}}</td>
+                </tr>
+            </table>
         </div>
     </div>
+</div>
 
 
 <!-- <div *ngIf="aanvragen?.length > 0;else geenAanvragen">
