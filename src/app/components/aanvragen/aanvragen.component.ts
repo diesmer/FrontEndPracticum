@@ -20,17 +20,10 @@ export class AanvragenComponent implements OnInit {
   constructor(public aanvraagService: AanvraagService) { }
 
   ngOnInit() {
-
+    //Aanvragen ophalen
     this.aanvraagService.getAanvragen().subscribe(aanvragen => {
       this.aanvragen = aanvragen;
     });
 
   }
-
-
-  // editAanvraag(event, aanvraag: Aanvraag) {
-  //   this.editState = true;
-  //   this.aanvraagToEdit = aanvraag;
-  // }
-
 }

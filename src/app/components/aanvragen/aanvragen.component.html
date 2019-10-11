@@ -1,23 +1,4 @@
 <div class="content">
-        <div class="verzoek">
-            <h2>Aanvraag</h2>
-            <div class="list">
-                <table>
-                    <tr>
-                        <th>Email</th>
-                        <th>Datum</th>
-                        <th>Tijd</th>
-                        <th>Status:</th>
-                    </tr>
-                    <tr *ngFor="let aanvraag of aanvragen">
-                        <td>{{aanvraag.email}}</td>
-                        <td>{{aanvraag.datum}}</td>
-                        <td>{{aanvraag.tijd}}</td>
-                        <td>{{aanvraag.status}}</td>
-                    </tr>
-                </table>
-            </div>
-
     <div class="verzoek">
         <h2>Aanvraag</h2>
         <div class="list">
@@ -26,9 +7,31 @@
                     <th>Email</th>
                     <th>Datum</th>
                     <th>Tijd</th>
-                    <th>Status</th>
+                    <th>Status:</th>
                 </tr>
                 <tr *ngFor="let aanvraag of aanvragen">
+                    <td>{{aanvraag.email}}</td>
+                    <td>{{aanvraag.datum}}</td>
+                    <td>{{aanvraag.tijd}}</td>
+                    <td>{{aanvraag.status}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="verzoek">
+        <h2>Aanvraag</h2>
+        <div class="list">
+            <!-- Tabel met hierin alle aanvragen die een status hebben dat geen 'behandeling' is -->
+            <table>
+                <tr>
+                    <th>Email</th>
+                    <th>Datum</th>
+                    <th>Tijd</th>
+                    <th>Status</th>
+                </tr>
+                <!-- For loop om door alle aanvragen te gaan -->
+                <tr *ngFor="let aanvraag of aanvragen">
+                    <!-- Elk item moet individueel de controlle uitvoeren om te voorkomen dat er niet één losse waarde in de tabel gezet wordt -->
                     <td *ngIf="aanvraag.status!=='behandeling';">{{aanvraag.email}}</td>
                     <td *ngIf="aanvraag.status!=='behandeling';">{{aanvraag.datum}}</td>
                     <td *ngIf="aanvraag.status!=='behandeling';">{{aanvraag.tijd}}</td>
@@ -38,15 +41,3 @@
         </div>
     </div>
 </div>
-
-
-<!-- <div *ngIf="aanvragen?.length > 0;else geenAanvragen">
-    <ul *ngFor="let aanvraag of aanvragen">
-        <li>{{aanvraag.email}} {{aanvraag.status}}</li>
-
-    </ul>
-</div>>
-
-<ng-template #geenAanvragen>
-    <h5>Er zijn geen aanvragen</h5>
-</ng-template> -->

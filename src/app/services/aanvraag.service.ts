@@ -23,8 +23,6 @@ export class AanvraagService {
   constructor(public afs: AngularFirestore) { 
     
     this.aanvragenCollection = afs.collection<Aanvraag>('aanvragen');
-    
-    //this.aanvragen = this.afs.collection('aanvragen').valueChanges();
 
     this.aanvragen = this.aanvragenCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
@@ -35,20 +33,22 @@ export class AanvraagService {
     );
   }
 
+  //Service voor het ophalen van alle aanvragen
   getAanvragen() {
     return this.aanvragen;
   }
 
-  
+  //Service voor het toevoegen van een aanvraag
   addAanvraag(aanvraag : Aanvraag) {
     this.aanvragenCollection.add(aanvraag)
   }
 
-
+  //Service voor het goedkeuren van een aanvraag
   updateAanvraag(aanvraagid) {
     return this.afs.collection('aanvragen').doc(aanvraagid).set({ status:'Goedgekeurd'}, { merge: true });
   }
 
+  //Service voor het afkeuren van een aanvraag
   updateAanvraagAfkeuren(aanvraagid) {
     return this.afs.collection('aanvragen').doc(aanvraagid).set({ status:'Afgekeurd'}, { merge: true });
   }

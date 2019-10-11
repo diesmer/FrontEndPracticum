@@ -21,14 +21,10 @@ export class ToevoegenaanvraagComponent implements OnInit {
   constructor(public aanvraagService: AanvraagService) { }
 
   ngOnInit() {
-
-    // this.aanvraagService.getAanvragen().subscribe(aanvragen => {
-    //   this.aanvragen = aanvragen;
-    // });
-
   }
 
-
+  //Toevoegen van een nieuwe collectie aanvraag aan de database
+  //Wordt uitgevoerd als de aanvraag gesubmit wordt
   onSubmit() {
     if(this.aanvraag.datum != '' && this.aanvraag.tijd != '' && this.aanvraag.status != '' && this.aanvraag.email != ''){
       this.aanvraagService.addAanvraag(this.aanvraag);

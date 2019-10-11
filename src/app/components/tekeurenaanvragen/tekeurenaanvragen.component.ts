@@ -16,23 +16,18 @@ export class TekeurenaanvragenComponent implements OnInit {
   constructor(public aanvraagService: AanvraagService) { }
 
   ngOnInit() {
-
     this.aanvraagService.getAanvragen().subscribe(aanvragen => {
       this.aanvragen = aanvragen;
     });
 
   }
 
-  // goedkeuren(goedkeuring) {
-  //   console.log('1');
-  //   this.aanvraagService.updateGoedAanvraag(goedkeuring);
-  //   console.log('2');
-  // }
-
+  //Aanvraag goedkeuren
   updateAanvraag(aanvraagid) {
     this.aanvraagService.updateAanvraag(aanvraagid);
   }
 
+  //Aanvraag afkeuren
   updateAanvraagAfkeuren(aanvraagid) {
     this.aanvraagService.updateAanvraagAfkeuren(aanvraagid);
   }
