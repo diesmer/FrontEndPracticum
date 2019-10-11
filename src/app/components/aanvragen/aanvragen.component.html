@@ -1,0 +1,33 @@
+<div class="content">
+        <div class="verzoek">
+            <h2>Aanvraag</h2>
+            <div class="list">
+                <table>
+                    <tr>
+                        <th>Email</th>
+                        <th>Datum</th>
+                        <th>Tijd</th>
+                        <th>Status:</th>
+                    </tr>
+                    <tr *ngFor="let aanvraag of aanvragen">
+                        <td>{{aanvraag.email}}</td>
+                        <td>{{aanvraag.datum}}</td>
+                        <td>{{aanvraag.tijd}}</td>
+                        <td>{{aanvraag.status}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+<!-- <div *ngIf="aanvragen?.length > 0;else geenAanvragen">
+    <ul *ngFor="let aanvraag of aanvragen">
+        <li>{{aanvraag.email}} {{aanvraag.status}}</li>
+
+    </ul>
+</div>>
+
+<ng-template #geenAanvragen>
+    <h5>Er zijn geen aanvragen</h5>
+</ng-template> -->

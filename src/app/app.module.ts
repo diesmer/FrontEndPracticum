@@ -15,6 +15,14 @@ import { VerzoekTonenQrComponent } from './verzoek-tonen-qr/verzoek-tonen-qr.com
 import { AanvraagTonenComponent } from './aanvraag-tonen/aanvraag-tonen.component';
 import { AanvraagKeurenComponent } from './aanvraag-keuren/aanvraag-keuren.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { AanvragenComponent } from './components/aanvragen/aanvragen.component';
+import { AanvraagService } from './services/aanvraag.service';
+import { PersoonService } from './services/persoon.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +33,7 @@ import { AanvraagKeurenComponent } from './aanvraag-keuren/aanvraag-keuren.compo
     VerzoekTonenQrComponent,
     AanvraagTonenComponent,
     AanvraagKeurenComponent,
+    AanvragenComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,9 +44,11 @@ import { AanvraagKeurenComponent } from './aanvraag-keuren/aanvraag-keuren.compo
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    AngularFireModule.initializeApp(environment.firebase, 'aanvraag-list-app'),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
   ],
-  providers: [],
+  providers: [AanvraagService, PersoonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
