@@ -5,11 +5,11 @@ import { AanvraagService } from '../../services/aanvraag.service';
 import { Aanvraag } from '../../models/aanvraag';
 
 @Component({
-  selector: 'app-aanvragen',
-  templateUrl: './aanvragen.component.html',
-  styleUrls: ['./aanvragen.component.css']
+  selector: 'app-tekeurenaanvragen',
+  templateUrl: './tekeurenaanvragen.component.html',
+  styleUrls: ['./tekeurenaanvragen.component.css']
 })
-export class AanvragenComponent implements OnInit {
+export class TekeurenaanvragenComponent implements OnInit {
 
   aanvragen: Aanvraag[];
 
@@ -23,9 +23,12 @@ export class AanvragenComponent implements OnInit {
 
   }
 
+  // goedkeuren(goedkeuring) {
+  //   console.log('1');
+  //   this.aanvraagService.updateGoedAanvraag(goedkeuring);
+  //   console.log('2');
+  // }
 
-  editAanvraag() {
-
-  }
-    
 }
+
+

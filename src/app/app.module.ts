@@ -20,7 +20,10 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { AanvragenComponent } from './components/aanvragen/aanvragen.component';
 import { AanvraagService } from './services/aanvraag.service';
+import { TekeurenaanvragenComponent } from './components/tekeurenaanvragen/tekeurenaanvragen.component';
+import { ToevoegenaanvraagComponent } from './components/toevoegenaanvraag/toevoegenaanvraag.component';
 
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -33,6 +36,8 @@ import { AanvraagService } from './services/aanvraag.service';
     AanvraagTonenComponent,
     AanvraagKeurenComponent,
     AanvragenComponent,
+    TekeurenaanvragenComponent,
+    ToevoegenaanvraagComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +51,7 @@ import { AanvraagService } from './services/aanvraag.service';
     MatListModule,
     AngularFireModule.initializeApp(environment.firebase, 'aanvraag-list-app'),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    FormsModule
   ],
   providers: [AanvraagService],
   bootstrap: [AppComponent]
