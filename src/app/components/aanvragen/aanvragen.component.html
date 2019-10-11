@@ -13,10 +13,10 @@
                 <!-- For loop om door alle aanvragen te gaan -->
                 <tr *ngFor="let aanvraag of aanvragen">
                     <!-- Elk item moet individueel de controlle uitvoeren om te voorkomen dat er niet één losse waarde in de tabel gezet wordt -->
-                    <td *ngIf="aanvraag.status!=='behandeling';">{{aanvraag.email}}</td>
-                    <td *ngIf="aanvraag.status!=='behandeling';">{{aanvraag.datum}}</td>
-                    <td *ngIf="aanvraag.status!=='behandeling';">{{aanvraag.tijd}}</td>
-                    <td *ngIf="aanvraag.status!=='behandeling';">{{aanvraag.status}}</td>
+                    <td *ngIf="aanvraag.status!=='Behandeling';">{{aanvraag.email}}</td>
+                    <td *ngIf="aanvraag.status!=='Behandeling';">{{aanvraag.datum}}</td>
+                    <td *ngIf="aanvraag.status!=='Behandeling';">{{aanvraag.tijd}}</td>
+                    <td *ngIf="aanvraag.status!=='Behandeling';">{{aanvraag.status}}</td>
                 </tr>
             </table>
         </div>

@@ -15,14 +15,14 @@
                 <tr *ngFor="let aanvraag of aanvragen">
                     <!-- Bij elke waarde moet er gecontrolleerd worden dat de aanvraag wel echt de status behandeling heeft, 
                         dit om losse tabelwaarden te voorkomen -->
-                    <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.email}}</td>
-                    <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.datum}}</td>
-                    <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.tijd}}</td>
+                    <td *ngIf="aanvraag.status==='Behandeling';">{{aanvraag.email}}</td>
+                    <td *ngIf="aanvraag.status==='Behandeling';">{{aanvraag.datum}}</td>
+                    <td *ngIf="aanvraag.status==='Behandeling';">{{aanvraag.tijd}}</td>
                     <!-- Twee inputs waarmee de status verandert kan worden -->
-                    <td *ngIf="aanvraag.status==='behandeling';">   
+                    <td *ngIf="aanvraag.status==='Behandeling';">   
                         <input type="button" value="Goedkeuren" (click)="updateAanvraag(aanvraag.id)">
                     </td>
-                    <td *ngIf="aanvraag.status==='behandeling';">
+                    <td *ngIf="aanvraag.status==='Behandeling';">
                         <input type="button" value="Afkeuren" (click)="updateAanvraagAfkeuren(aanvraag.id)">
                     </td>
                 </tr>

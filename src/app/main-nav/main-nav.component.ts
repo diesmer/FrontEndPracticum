@@ -10,10 +10,12 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class MainNavComponent implements DoCheck {
 
-  benis: number;
+  //Belangrijke variabele om te kijken wat voor iemand ingelogd is
+  benis: string;
 
+  //Functie bij bovenstaande variabele
   ngDoCheck() {
-    this.benis = sessionStorage.length;
+    this.benis = sessionStorage.getItem('rol');
   }
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -23,7 +25,8 @@ export class MainNavComponent implements DoCheck {
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
-
+  
+  //Uitloggen
   logUit(){
     sessionStorage.clear();
   }
