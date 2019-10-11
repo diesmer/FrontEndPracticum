@@ -26,7 +26,10 @@ import { PersoonService } from './services/persoon.service';
 import { TekeurenaanvragenComponent } from './components/tekeurenaanvragen/tekeurenaanvragen.component';
 import { ToevoegenaanvraagComponent } from './components/toevoegenaanvraag/toevoegenaanvraag.component';
 
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { AanvraagqrComponent } from './components/aanvraagqr/aanvraagqr.component'
+
+import { QRCodeModule } from 'angular2-qrcode';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,8 @@ import { FormsModule } from '@angular/forms'
     AanvraagKeurenComponent,
     AanvragenComponent,
     TekeurenaanvragenComponent,
-    ToevoegenaanvraagComponent
+    ToevoegenaanvraagComponent,
+    AanvraagqrComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,8 @@ import { FormsModule } from '@angular/forms'
     MatListModule,
     AngularFireModule.initializeApp(environment.firebase, 'aanvraag-list-app'),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
-    FormsModule
+    FormsModule,
+    QRCodeModule
   ],
   providers: [AanvraagService, PersoonService],
   bootstrap: [AppComponent]

@@ -1,0 +1,27 @@
+table, td, th{
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+h2, table {
+    margin-left: 8%;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.aanvraag{
+    width: 50%;
+    border: 3px solid black;
+    border-radius: 25px;
+}
+.aanvraag h2{
+    padding-left: 10px;
+}

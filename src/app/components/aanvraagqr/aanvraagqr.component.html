@@ -1,0 +1,31 @@
+<div class="content">
+    <div class="verzoek">
+        <h2>Verzoek</h2>
+        <div class="list">
+            <table>
+                <tr>
+                    <th>Datum</th>
+                    <th>Tijd</th>
+                    <th>Status</th>
+                    <th>QR-code</th>
+                </tr>
+                <tr *ngFor="let aanvraag of aanvragen">
+                    <td *ngIf="aanvraag.status!=='behandeling' && aanvraag.email===user;">{{aanvraag.datum}}</td>
+                    <td *ngIf="aanvraag.status!=='behandeling' && aanvraag.email===user">{{aanvraag.tijd}}</td>
+                    <td *ngIf="aanvraag.status!=='behandeling' && aanvraag.email===user;">{{aanvraag.status}}</td>
+                    <!-- QR-code wordt gegenereerd afhankelijk van de status -->
+                    <td *ngIf="aanvraag.status!=='behandeling' && aanvraag.email===user;">
+                        <div id="qrplek">
+                            <qr-code [value]="'true'" [size]="150" *ngIf="aanvraag.status==='Goedgekeurd' && aanvraag.email===user;"></qr-code>
+                            <qr-code [value]="'false'" [size]="150" *ngIf="aanvraag.status==='Afgekeurd' && aanvraag.email===user;"></qr-code>
+                            <qr-code [value]="'false'" [size]="150" *ngIf="aanvraag.status==='Behandeling' && aanvraag.email===user;"></qr-code>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="welkomLabel">
+        <span>Welkom {{user}}</span>
+    </div>
+</div>

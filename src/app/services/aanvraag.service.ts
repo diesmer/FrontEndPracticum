@@ -22,7 +22,7 @@ export class AanvraagService {
 
   constructor(public afs: AngularFirestore) { 
     
-    this.aanvragenCollection = afs.collection<Aanvraag>('aanvragen');
+    this.aanvragenCollection = afs.collection<Aanvraag>('aanvragen');0
 
     this.aanvragen = this.aanvragenCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {

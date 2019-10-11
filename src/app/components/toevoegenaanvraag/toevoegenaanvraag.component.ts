@@ -14,7 +14,7 @@ export class ToevoegenaanvraagComponent implements OnInit {
   aanvraag: Aanvraag = {
     datum:'',
     tijd:'',
-    status:'behandeling',
+    status:'Behandeling',
     email:'henk@supertenk.com'
   }
 
@@ -30,7 +30,7 @@ export class ToevoegenaanvraagComponent implements OnInit {
       this.aanvraagService.addAanvraag(this.aanvraag);
       this.aanvraag.datum = '';
       this.aanvraag.tijd = '';
-      this.aanvraag.status = 'behandeling';
+      this.aanvraag.status = 'Behandeling';
       this.aanvraag.email = 'henk@supertenk.com';
     }
   }
