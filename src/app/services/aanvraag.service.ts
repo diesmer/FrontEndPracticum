@@ -16,6 +16,8 @@ export class AanvraagService {
 
   aanvragen: Observable<Aanvraag[]>;
 
+  aanvraagDoc: AngularFirestoreDocument<Aanvraag>;
+
   aanvragenCollection: AngularFirestoreCollection<Aanvraag>;
 
   constructor(public afs: AngularFirestore) { 
@@ -40,6 +42,16 @@ export class AanvraagService {
   
   addAanvraag(aanvraag : Aanvraag) {
     this.aanvragenCollection.add(aanvraag)
+  }
+
+
+  updateAanvraag(aanvraagid) {
+    // this.aanvraagDoc = this.afs.doc('aanvragen/$(aanvraag.status)');
+    // this.aanvraagDoc.update(aanvraag);
+
+    console.log(aanvraagid);
+    return this.afs.collection('aanvragen').doc(aanvraagid).set({ status:'Goedgekeurd'}, { merge: true });
+
   }
 
 }

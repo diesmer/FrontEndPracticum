@@ -1,5 +1,3 @@
-<p>toevoegenaanvraag works!</p>
-
 <div>
     <div>
         <div>
@@ -9,21 +7,20 @@
                 </div>
                 <div>
                     <form (ngSubmit)="onSubmit()">
-                        <div>
-                            <div>
-                                <div>
+                        <table>
+                            <tr>
+                                <td>
                                     <label>Datum</label>
                                     <input type="date" [(ngModel)]="aanvraag.datum" name="datum">
-                                </div>
-                            </div>
-                            <div>
-                                <div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <label>Tijd</label>
                                     <input type="time" [(ngModel)]="aanvraag.tijd" name="tijd">
-                                </div>
-                            </div>
-                            
-                        </div>
+                                </td>
+                            </tr>
+                        </table>
                         <div>
                             <div>
                                 <input type="submit" value="Toevoegen aanvraag">

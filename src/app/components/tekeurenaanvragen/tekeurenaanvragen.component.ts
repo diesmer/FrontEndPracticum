@@ -29,6 +29,11 @@ export class TekeurenaanvragenComponent implements OnInit {
   //   console.log('2');
   // }
 
+  updateAanvraag(aanvraagid) {
+    console.log(aanvraagid);
+    this.aanvraagService.updateAanvraag(aanvraagid);
+  }
+
 }
 
 
