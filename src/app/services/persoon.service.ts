@@ -13,13 +13,13 @@ export class PersoonService {
 
   personen: Observable<Persoon[]>;
 
-  aanvragenCollection: AngularFirestoreCollection<Persoon>;
+  personenCollection: AngularFirestoreCollection<Persoon>;
 
   constructor(public afs: AngularFirestore) { 
     this.personen = this.afs.collection('persoon').valueChanges()
   }
 
-  getAanvragen() {
+  getPersonen() {
     return this.personen;
   }
 }
