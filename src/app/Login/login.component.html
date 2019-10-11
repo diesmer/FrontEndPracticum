@@ -2,9 +2,7 @@
   <!-- Tabs Titles -->
 
   <!-- Login Form -->
-  <form>
-    <input type="text" id="login" class="fadeIn second" name="login" placeholder="Emailadres">
-    <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password">
-    <input type="submit" class="fadeIn fourth" value="Log In">
-  </form>
+    <input [ngStyle]="{'border' : errorM ? '2px solid red' : 'none'}" type="text" id="login" class="fadeIn second" name="login" placeholder="Emailadres" [(ngModel)]="email">
+    <input [ngStyle]="{'border' : errorM ? '2px solid red' : 'none'}" type="text" id="password" class="fadeIn third" name="login" placeholder="Password" [(ngModel)]="password">
+    <button class="btn btn-primary" (click)="checkLogIn()">Log in</button> 
 </div>

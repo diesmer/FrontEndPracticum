@@ -19,6 +19,8 @@ export class PersoonComponent implements OnInit {
 
     this.persoonService.getPersonen().subscribe(personen => {
       this.personen = personen;
+      console.log(personen);
+      console.log(this.personen);
     });
 
   }
