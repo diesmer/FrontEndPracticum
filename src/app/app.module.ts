@@ -22,7 +22,6 @@ import { AanvragenComponent } from './components/aanvragen/aanvragen.component';
 import { AanvraagService } from './services/aanvraag.service';
 
 import { PersoonService } from './services/persoon.service';
-import { FormsModule } from '@angular/forms';
 
 import { TekeurenaanvragenComponent } from './components/tekeurenaanvragen/tekeurenaanvragen.component';
 import { ToevoegenaanvraagComponent } from './components/toevoegenaanvraag/toevoegenaanvraag.component';
