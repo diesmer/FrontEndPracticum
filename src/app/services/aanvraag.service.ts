@@ -14,12 +14,12 @@ import { map } from 'rxjs/operators';
 })
 export class AanvraagService {
 
+  //Collectie uit firestore ophalen
   aanvragen: Observable<Aanvraag[]>;
-
   aanvraagDoc: AngularFirestoreDocument<Aanvraag>;
-
   aanvragenCollection: AngularFirestoreCollection<Aanvraag>;
 
+  //Constructor voor het ophalen van de collectie
   constructor(public afs: AngularFirestore) { 
     
     this.aanvragenCollection = afs.collection<Aanvraag>('aanvragen');0

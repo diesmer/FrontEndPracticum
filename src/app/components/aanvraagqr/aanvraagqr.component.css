@@ -25,3 +25,6 @@ h2 {
 .aanvraag h2{
     padding-left: 10px;
 }
+
+.verzoek { float: left;}
+.welkomLabel { float: left; padding-left: 5%; margin-top: 10%;}

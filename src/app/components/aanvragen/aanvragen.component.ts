@@ -14,6 +14,7 @@ export class AanvragenComponent implements OnInit {
 
   aanvragen: Aanvraag[];
 
+  //Voorhet vaststellen van de state, nodig voor updaten
   editState: boolean = true;
   aanvraagToEdit: Aanvraag;
 

@@ -2,6 +2,7 @@
     <div class="verzoek">
         <h2>Verzoek</h2>
         <div class="list">
+            <!-- Tabel met verzoek van student-->
             <table>
                 <tr>
                     <th>Datum</th>
@@ -9,13 +10,16 @@
                     <th>Status</th>
                     <th>QR-code</th>
                 </tr>
+                <!-- For loop om door alle aanvragen te gaan -->
                 <tr *ngFor="let aanvraag of aanvragen">
+                    <!-- Elk item moet individueel de controlle uitvoeren om te voorkomen dat er niet één losse waarde in de tabel gezet wordt -->
                     <td *ngIf="aanvraag.status!=='behandeling' && aanvraag.email===user;">{{aanvraag.datum}}</td>
                     <td *ngIf="aanvraag.status!=='behandeling' && aanvraag.email===user">{{aanvraag.tijd}}</td>
                     <td *ngIf="aanvraag.status!=='behandeling' && aanvraag.email===user;">{{aanvraag.status}}</td>
                     <!-- QR-code wordt gegenereerd afhankelijk van de status -->
                     <td *ngIf="aanvraag.status!=='behandeling' && aanvraag.email===user;">
                         <div id="qrplek">
+                            <!-- Afhankelijk van wat de status is wordt een andere QR-code genegereerd en getoond-->
                             <qr-code [value]="'true'" [size]="150" *ngIf="aanvraag.status==='Goedgekeurd' && aanvraag.email===user;"></qr-code>
                             <qr-code [value]="'false'" [size]="150" *ngIf="aanvraag.status==='Afgekeurd' && aanvraag.email===user;"></qr-code>
                             <qr-code [value]="'false'" [size]="150" *ngIf="aanvraag.status==='Behandeling' && aanvraag.email===user;"></qr-code>
@@ -25,6 +29,7 @@
             </table>
         </div>
     </div>
+    <!-- Welkombericht voor de ingelogde gebruiker -->
     <div class="welkomLabel">
         <span>Welkom {{user}}</span>
     </div>

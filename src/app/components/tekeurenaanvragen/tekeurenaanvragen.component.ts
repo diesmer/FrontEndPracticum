@@ -15,6 +15,7 @@ export class TekeurenaanvragenComponent implements OnInit {
 
   constructor(public aanvraagService: AanvraagService) { }
 
+  //Aanvvragen ophalen
   ngOnInit() {
     this.aanvraagService.getAanvragen().subscribe(aanvragen => {
       this.aanvragen = aanvragen;

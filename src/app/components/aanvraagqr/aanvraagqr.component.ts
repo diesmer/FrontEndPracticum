@@ -9,6 +9,7 @@ import { Aanvraag } from 'src/app/models/aanvraag';
 })
 export class AanvraagqrComponent implements OnInit {
 
+  //Ingelogde user
   user="benk@supertenk.com"
 
   aanvragen: Aanvraag[];

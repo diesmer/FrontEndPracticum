@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
 import { AanvraagService } from '../../services/aanvraag.service';
-
 import { Aanvraag } from '../../models/aanvraag';
 
 @Component({
@@ -11,11 +9,12 @@ import { Aanvraag } from '../../models/aanvraag';
 })
 export class ToevoegenaanvraagComponent implements OnInit {
 
+  //Attributen van de aanvraag
   aanvraag: Aanvraag = {
     datum:'',
     tijd:'',
     status:'Behandeling',
-    email:'henk@supertenk.com'
+    email:'benk@supertenk.com'
   }
 
   constructor(public aanvraagService: AanvraagService) { }
@@ -31,7 +30,7 @@ export class ToevoegenaanvraagComponent implements OnInit {
       this.aanvraag.datum = '';
       this.aanvraag.tijd = '';
       this.aanvraag.status = 'Behandeling';
-      this.aanvraag.email = 'henk@supertenk.com';
+      this.aanvraag.email = 'benk@supertenk.com';
     }
   }
 
