@@ -15,8 +15,8 @@ export class PersoonComponent implements OnInit {
 
   constructor(public persoonService: PersoonService) { }
 
+  //Ophalen van alle personen
   ngOnInit() {
-
     this.persoonService.getPersonen().subscribe(personen => {
       this.personen = personen;
       console.log(personen);

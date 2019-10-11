@@ -9,12 +9,15 @@ import { Aanvraag } from '../../models/aanvraag';
 })
 export class ToevoegenaanvraagComponent implements OnInit {
 
+  //Ingelogde user
+  user=sessionStorage.getItem('email');
+
   //Attributen van de aanvraag
   aanvraag: Aanvraag = {
     datum:'',
     tijd:'',
     status:'Behandeling',
-    email:'benk@supertenk.com'
+    email:this.user
   }
 
   constructor(public aanvraagService: AanvraagService) { }
@@ -30,7 +33,7 @@ export class ToevoegenaanvraagComponent implements OnInit {
       this.aanvraag.datum = '';
       this.aanvraag.tijd = '';
       this.aanvraag.status = 'Behandeling';
-      this.aanvraag.email = 'benk@supertenk.com';
+      this.aanvraag.email = this.user;
     }
   }
 
