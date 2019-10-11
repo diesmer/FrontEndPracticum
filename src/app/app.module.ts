@@ -20,6 +20,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { AanvragenComponent } from './components/aanvragen/aanvragen.component';
 import { AanvraagService } from './services/aanvraag.service';
+import { PersoonService } from './services/persoon.service';
 
 
 @NgModule({
@@ -47,7 +48,7 @@ import { AanvraagService } from './services/aanvraag.service';
     AngularFireModule.initializeApp(environment.firebase, 'aanvraag-list-app'),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
   ],
-  providers: [AanvraagService],
+  providers: [AanvraagService, PersoonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
