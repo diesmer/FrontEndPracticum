@@ -19,6 +19,7 @@ export class AanvragenComponent implements OnInit {
 
     this.aanvraagService.getAanvragen().subscribe(aanvragen => {
       this.aanvragen = aanvragen;
+      console.log(this.aanvragen);
     });
 
   }

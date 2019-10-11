@@ -21,6 +21,7 @@ import { environment } from '../environments/environment';
 import { AanvragenComponent } from './components/aanvragen/aanvragen.component';
 import { AanvraagService } from './services/aanvraag.service';
 import { PersoonService } from './services/persoon.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { PersoonService } from './services/persoon.service';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'aanvraag-list-app'),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
   ],

@@ -258,3 +258,8 @@ input[type=text]:placeholder {
 #icon {
   width:60%;
 }
+
+.errorMIdk{
+  border: 2px solid red;
+  background-color: red;
+}

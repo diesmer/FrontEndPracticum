@@ -3,9 +3,11 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="login">Login</a>
-      <a mat-list-item routerLink="registreer">Registreer Account</a>
-      <a mat-list-item routerLink="aanvraagTonen">aanvraagtonen</a>
+      <a *ngIf="benis == 0" mat-list-item routerLink="login">Login</a>
+      <a *ngIf="benis == 0" mat-list-item routerLink="registreer">Registreer Account</a>
+      <a *ngIf="benis != 0" mat-list-item routerLink="aanvraagTonen">aanvraagtonen</a> <!--hier worden de pagina's op navigatiebar geshowt als er ingelogd wordt-->
+      <a *ngIf="benis != 0" mat-list-item routerLink="login" (click)="logUit()">Log uit</a>
+      <a *ngIf="benis != 0" mat-list-item routerLink="aanvraagkeuren">aanvraagkeuren</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

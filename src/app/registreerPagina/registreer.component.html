@@ -1,8 +1,6 @@
 <div id="formContent">
   <!-- Registreer Form -->
-  <form>
-    <input type="text" id="emailInputRegistreer" class="fadeIn first" name="emailInputRegistreer" placeholder="Emailadres">
-    <input type="text" id="passwordInputRegistreer" class="fadeIn second" name="passwordInputRegistreer" placeholder="Password">
-    <input type="submit" class="fadeIn thirth" value="Registreer">
-  </form>
+    <input [ngStyle]="{'border' : errorM ? '2px solid red' : 'none'}" type="text" id="login" class="fadeIn second" name="login" placeholder="Emailadres" [(ngModel)]="email">
+    <input [ngStyle]="{'border' : errorM ? '2px solid red' : 'none'}" type="text" id="password" class="fadeIn third" name="login" placeholder="Password" [(ngModel)]="password">
+    <button class="btn btn-primary" (click)="checkLogIn()">registreer</button> 
 </div>
