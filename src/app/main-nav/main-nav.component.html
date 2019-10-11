@@ -3,11 +3,15 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a *ngIf="benis == 0" mat-list-item routerLink="login">Login</a>
-      <a *ngIf="benis == 0" mat-list-item routerLink="registreer">Registreer Account</a>
-      <a *ngIf="benis != 0" mat-list-item routerLink="aanvraagTonen">aanvraagtonen</a> <!--hier worden de pagina's op navigatiebar geshowt als er ingelogd wordt-->
-      <a *ngIf="benis != 0" mat-list-item routerLink="login" (click)="logUit()">Log uit</a>
-      <a *ngIf="benis != 0" mat-list-item routerLink="aanvraagkeuren">aanvraagkeuren</a>
+      <!-- Onderverdeling van navbar items aan de hand van de rol van de user -->
+      <a *ngIf="benis != 1 && benis != 2" mat-list-item routerLink="login">Login</a>
+      <a *ngIf="benis != 1 && benis != 2" mat-list-item routerLink="registreer">Registreer Account</a>
+      <!--hier worden de pagina's op navigatiebar geshowt als er ingelogd wordt-->
+      <a *ngIf="benis == 1" mat-list-item routerLink="aanvraagTonen">aanvraagtonen</a>
+      <a *ngIf="benis == 1" mat-list-item routerLink="aanvraagkeuren">aanvraagkeuren</a>
+      <a *ngIf="benis == 2" mat-list-item routerLink="tonenQr">Verzoeken</a>
+      <a *ngIf="benis == 2" mat-list-item routerLink="verzoekIndienen">Reserveren</a>
+      <a *ngIf="benis == 1 || benis == 2" mat-list-item routerLink="login" (click)="logUit()">Log uit</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
