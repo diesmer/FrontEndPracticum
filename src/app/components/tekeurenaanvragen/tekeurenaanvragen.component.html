@@ -1,0 +1,36 @@
+<div class="content">
+    <div class="aanvraag">
+        <h2>Aanvraag</h2>
+        <div class="list">
+            <!-- Tabel met alle aanvragen die nog niet behandeld zijn -->
+            <table>
+                <tr>
+                    <th>Email</th>
+                    <th>Datum</th>
+                    <th>Tijd</th>
+                    <th>Goedkeuren</th>
+                    <th>Afkeuren</th>
+                </tr>
+                <!-- For loop die door alle aanvragen heetgaat -->
+                <tr *ngFor="let aanvraag of aanvragen">
+                    <!-- Bij elke waarde moet er gecontrolleerd worden dat de aanvraag wel echt de status behandeling heeft, 
+                        dit om losse tabelwaarden te voorkomen -->
+                    <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.email}}</td>
+                    <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.datum}}</td>
+                    <td *ngIf="aanvraag.status==='behandeling';">{{aanvraag.tijd}}</td>
+                    <!-- Twee inputs waarmee de status verandert kan worden -->
+                    <td *ngIf="aanvraag.status==='behandeling';">   
+                        <input type="button" value="Goedkeuren" (click)="updateAanvraag(aanvraag.id)">
+                    </td>
+                    <td *ngIf="aanvraag.status==='behandeling';">
+                        <input type="button" value="Afkeuren" (click)="updateAanvraagAfkeuren(aanvraag.id)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- Welkombericht voor de ingelogde user -->
+    <div class="welkomLabel">
+        <span>Welkom {{user}}</span>
+    </div>
+</div>

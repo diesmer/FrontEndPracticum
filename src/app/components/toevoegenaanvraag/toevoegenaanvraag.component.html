@@ -1,0 +1,31 @@
+<div>
+    <h5>Toevoegen aanvraag</h5>
+</div>
+<div>
+    <!-- Aanvraag formulier -->
+    <form (ngSubmit)="onSubmit()">
+        <table>
+            <!-- Datum -->
+            <tr>
+                <td>
+                    <label>Datum</label>
+                    <input type="date" [(ngModel)]="aanvraag.datum" name="datum">
+                </td>
+            </tr>
+            <!-- Tijd -->
+            <tr>
+                <td>
+                    <label>Tijd</label>
+                    <input type="time" [(ngModel)]="aanvraag.tijd" name="tijd">
+                </td>
+            </tr>
+            <!-- Default status: 'behandeling' -->
+            <!-- Default email: ingelogde user -->
+        </table>
+        <div>
+            <div>
+                <input type="submit" value="Toevoegen aanvraag">
+            </div>
+        </div>
+    </form>
+</div>
