@@ -3,6 +3,6 @@
 
   <!-- Login Form -->
     <input [ngStyle]="{'border' : errorM ? '2px solid red' : 'none'}" type="text" id="login" class="fadeIn second" name="login" placeholder="Emailadres" [(ngModel)]="email">
-    <input [ngStyle]="{'border' : errorM ? '2px solid red' : 'none'}" type="text" id="password" class="fadeIn third" name="login" placeholder="Password" [(ngModel)]="password">
+    <input [ngStyle]="{'border' : errorM ? '2px solid red' : 'none'}" type="text" id="password" class="fadeIn third passwordcss" name="login" placeholder="Password" [(ngModel)]="password">
     <button class="btn btn-primary" (click)="checkLogIn()">Log in</button> 
 </div>

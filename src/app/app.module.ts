@@ -56,7 +56,6 @@ import { QRCodeModule } from 'angular2-qrcode';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'aanvraag-list-app'),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     FormsModule,
